@@ -17,11 +17,9 @@ class ViewController: UIViewController {
 
     @IBAction func trainingButton(_ sender: Any) {
         print("clicked")
-        let viewController: UIViewController = TrainingViewController()
-        
-        //viewController.modalPresentationStyle = .fullScreen
-        //UIStoryboard(name: "TrainingStoryboard", bundle: nil)
-                   //.instantiateViewController(withIdentifier: "Training") as UIViewController
+        let viewController: UIViewController = UIStoryboard(name: "TrainingStoryboard", bundle: nil)
+                   .instantiateViewController(withIdentifier: "TrainingStoryboard") as UIViewController
+        viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true)
     }
 }
